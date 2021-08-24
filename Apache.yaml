@@ -1,0 +1,10 @@
+---
+- Name: Apache install
+  hosts: all
+  become: true
+  tasks:
+      - name: update ubuntu package and install apache
+        apt: 
+          name: apache2
+          update_cache: yes
+          state: present
